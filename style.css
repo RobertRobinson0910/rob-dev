@@ -1,0 +1,190 @@
+/* RESET & BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+/* HEADER */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-pfp {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #38bdf8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-pfp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+/* TYPING ANIMATION FOR NAME */
+.typing-name {
+    display: inline-block;
+    position: relative;   /* for cursor */
+    font-size: 36px;
+    color: #e5e7eb;
+}
+
+/* text span that animates width */
+.typing-name span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0ch;
+    animation: typing-loop 10s steps(15, end) infinite;
+}
+
+/* blinking cursor */
+.typing-name::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;            /* always at the end of parent h1 */
+    width: 3px;
+    height: 100%;
+    background-color: #fff;
+    animation: blink 1s step-start infinite;
+}
+
+/* keyframes for typing + pause + delete */
+@keyframes typing-loop {
+    0%, 10% { width: 0ch; }
+    10%, 60% { width: 15ch; }
+    60%, 70% { width: 15ch; }
+    70%, 100% { width: 0ch; }
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+
+
+
+
+/* Subtitle */
+.hero p {
+    font-size: 20px;
+    color: #9ca3af;
+    margin-top: 8px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CARDS */
+.card {
+    background-color: #111827;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+/* SECTION TITLE */
+.section-title {
+    margin: 40px 0 20px;
+}
+
+/* ICON GRID */
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+/* ICON CARDS */
+.icon-card {
+    background-color: #111827;
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+    transition: transform 0.2s ease;
+}
+
+.icon-card:hover {
+    transform: scale(1.08);
+}
+
+/* FONT AWESOME ICONS */
+.icon-card i {
+    font-size: 36px;
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+/* PNG ICONS (like Roblox) */
+.icon-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+    object-fit: contain;
+    opacity: 0.85;
+    filter: brightness(0) saturate(100%) invert(63%) sepia(86%)
+            saturate(344%) hue-rotate(170deg);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.link-card:hover img {
+    transform: scale(1.05);
+    opacity: 1; /* keeps color intact */
+}
+
+/* ICON TEXT */
+.icon-card p {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* LINKS */
+.link-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-card:hover i {
+    color: #7dd3fc;
+}
+
+.link-card:hover p {
+    color: #e5e7eb;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+}
