@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Robinson | Roblox Developer</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #111111;
+            --border-color: #1f1f1f;
+            --text-main: #ffffff;
+            --text-dim: #666666;
+            --accent-glow: rgba(255, 255, 255, 0.03);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            padding: 0 24px;
+        }
+
+        header {
+            padding-top: 80px;
+            padding-bottom: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .pfp {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            object-fit: cover;
+            background: var(--card-bg);
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -1.5px;
+            line-height: 1;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--text-dim);
+            margin: 4px 0 0 0;
+        }
+
+        section {
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-dim);
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            border-color: #333;
+            background: var(--accent-glow);
+            transform: translateY(-3px);
+        }
+
+        /* Icon Styling */
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Space between icon and text */
+        }
+
+        .card h3 i {
+            font-size: 1.1rem;
+            color: #fff; /* You can change this to an accent color if desired */
+            opacity: 0.8;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: #1a1a1a;
+            padding: 4px 10px;
+            border-radius: 4px;
+            color: #999;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .header-content { flex-direction: column; align-items: flex-start; }
+            .name { font-size: 2.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header data-aos="fade-in">
+            <div class="header-content">
+                <img src="pfp.png" alt="Robert Robinson" class="pfp">
+                <div class="text-group">
+                    <h1 class="name">Robert Robinson</h1>
+                    <p class="subtitle">Roblox Developer</p>
+                </div>
+            </div>
+        </header>
+
+        <section data-aos="fade-up">
+            <h2>About</h2>
+            <p style="font-size: 1.1rem; color: #bbb; max-width: 650px; line-height: 1.7;">
+                🛠️ Focus: High-performance & optimized game architecture.<br>🚀 Goal: Creating seamless, lag-free experiences through efficient code.
+            </p>
+        </section>
+
+        <section data-aos="fade-up">
+            <h2>Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-code"></i>Luau Coding</h3>
+                    <p>Advanced experience in roblox scripting.</p>
+                    <div class="tags">
+                        <span class="tag">Game Systems</span>
+                        <span class="tag">Luau</span>
+                        <span class="tag">~ 1 Year of experience</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fa-solid fa-cube"></i>Building</h3>
+                    <p>Although coding is my main focus, I also use roblox's core parts and modelling features to make game assets.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Game Systems</span>
+                        <span class="tag">~ 1 Year Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-aos="fade-up">
+            <h2>Places I have developed in</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-leaf"></i>Evermere PLC</h3>
+                    <span class="tag">Supermarket RP</span>
+                    <span class="tag">W.I.P.</span>
+                    <span class="tag">Partner with HB</span>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-bag-shopping"></i>Vesta PLC</h3>
+                    <span class="tag">Supermarket RP</span>
+                    <span class="tag">Partner with HB</span>
+                </div>
+            </div>
+        </section>
+        <section data-aos="fade-up">
+            <h2>My own project</h2>
+            <div class="card">
+                    <h3><i class="fa-solid fa-burger"></i>Holy Burgers</h3>
+                    <p>HB is my first personal project that I've brought to the roblox community. It went through a long journey and went through a lot of development!</p>
+                    <h3>Interested?</h3>
+                    <a href="https://robertrobinson0910.github.io/HolyBurgers/" style="color: #ff5555;text-decoration: none;">Check our Website!<br><br></a>
+                    <span class="tag">Fast Food RP</span>
+                    <span class="tag">HB</span>
+                </div>
+        </section>
+        <section data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <div class="card">
+                <h3><i class="fa-brands fa-discord"></i>Discord:</h3><a href="http://discord.com/users/982587964133638194" style="color:#ff5555; text-decoration: none;">Robert Robinson</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+    </script>
+</body>
+</html>
