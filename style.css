@@ -251,7 +251,7 @@ h2 {
     bottom: 1px;
     right: 40px;
     z-index: 100;
-    pointer-events: none; 
+    pointer-events: none;
     opacity: 1;
     transition: opacity 0.3s ease;
 }
@@ -261,6 +261,7 @@ h2 {
     height: auto;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
+
 @media (max-width: 600px) {
     .signature-footer {
         bottom: 20px;
@@ -269,4 +270,23 @@ h2 {
     .signature-img {
         width: 80px;
     }
+}
+
+.studying { 
+    background-color: #00a2ff; 
+    animation: studio-pulse 2s infinite;
+}
+
+@keyframes studio-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(0, 162, 255, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(0, 162, 255, 0); }
+    100% { box-shadow: 0 0 0 0px rgba(0, 162, 255, 0); }
+}
+
+.developing-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #00a2ff;
+    margin-top: 4px;
+    display: none;
 }
